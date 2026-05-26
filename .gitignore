@@ -3,3 +3,6 @@ install/
 log/
 models/
 *.zip
+
+STL Gazebo/
+arduinobot.urdf.xacro
