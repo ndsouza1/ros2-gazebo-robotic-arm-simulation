@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'service_server = arduinobot_python_examples.service_server:main',
+            'simple_service_client = arduinobot_python_examples.simple_service_client:main',
         ],
     },
 )
