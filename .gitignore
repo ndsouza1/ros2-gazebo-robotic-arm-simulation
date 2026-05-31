@@ -6,3 +6,7 @@ models/
 
 STL Gazebo/
 arduinobot.urdf.xacro
+*.gv
+*.pdf
+robot.txt
+test.urdf
