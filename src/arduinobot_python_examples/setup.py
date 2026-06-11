@@ -1,3 +1,7 @@
+import os
+from glob import glob
+from setuptools import setup
+
 from setuptools import find_packages, setup
 
 package_name = 'arduinobot_python_examples'
@@ -10,6 +14,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*launch.[pxy][yma]*')))
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -26,6 +31,7 @@ setup(
         'console_scripts': [
             'service_server = arduinobot_python_examples.service_server:main',
             'simple_service_client = arduinobot_python_examples.simple_service_client:main',
+            'simple_moveit_interface = arduinobot_python_examples.simple_moveit_interface:main',
         ],
     },
 )
